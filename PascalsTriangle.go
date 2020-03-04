@@ -1,22 +1,20 @@
 package main
 
-import "fmt"
+//import "fmt"
 
 func main() {
 
 number:=5
-text:='*'
+text:="*"
 
 	for i := 0; i < number; i++ {
 		for j := 0; j <= i; j++{
-			fmt.Print(text)
+			print(text)
 		}
-		fmt.Println()
+		println()
 	}
-
-	
 }
 
-//func print(item string){
-//	fmt.Print(item string)
-// TODO build an easier print method
+/* fmt.Print isn't the only way!
+   I dont need fmt right now
+   for this little script*/
