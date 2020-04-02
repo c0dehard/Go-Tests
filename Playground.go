@@ -23,6 +23,12 @@ type Person struct {
 	id      string
 }
 
+type Jedi struct {
+	Name   string
+	Force  bool
+	Phrase string
+}
+
 func (p Person) GetFullName() string {
 	return fmt.Sprintf("%s %s", p.Name, p.Surname)
 }
@@ -46,6 +52,10 @@ func main() {
 	for _, jedis := range jedis {
 		fmt.Print(jedis, "\n")
 	}
+	
+	y := Jedi{Name: "Yoda", Force: true}
+	y.Phrase = "%s: ,,Patience you must have, %t this is!''\n"
+	fmt.Printf(y.Phrase, y.Name, y.Force)
 
 	print("\n- - - - \n")
 
