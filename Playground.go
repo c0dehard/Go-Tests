@@ -29,11 +29,15 @@ type Jedi struct {
 	Phrase string
 }
 
+func (j *Jedi) addPhrase(newPhrase string) {
+	j.Phrase = newPhrase
+}
+
+
 func (p Person) GetFullName() string {
 	return fmt.Sprintf("%s %s", p.Name, p.Surname)
 }
 
-// Methoden in Go haben keine Methoden innerhalb ihres Scopes
 func (p Planet) NtimesRadius() int {
 	return p.Size * p.Radius
 }
@@ -54,8 +58,8 @@ func main() {
 	}
 	
 	y := Jedi{Name: "Yoda", Force: true}
-	y.Phrase = "%s: ,,Patience you must have, %t this is!''\n"
-	fmt.Printf(y.Phrase, y.Name, y.Force)
+	y.addPhrase("Patience you must have")
+	fmt.Printf("%s: ,,%s, %t this is!''\n", y.Name, y.Phrase, y.Force)
 
 	print("\n- - - - \n")
 
