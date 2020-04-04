@@ -46,6 +46,16 @@ func (p *Planet) SetSize(size int) {
 	p.Size = size
 }
 
+type DidYouKnow struct {
+	name string
+	age int
+}
+
+func NewDidYouKnow(name string,age int) *DidYouKnow{
+	p := DidYouKnow{name:name,age:age}
+	return &p
+}
+
 func main() {
 	var test Planet = Planet{Size: 4, Name: "Yavin"}
 	fmt.Print(test.Name)
@@ -72,4 +82,8 @@ func main() {
 	}
 
 	fmt.Printf("%s likes %s, %s, %s and %s\n", p.GetFullName(), p.Hobbies[0], p.Hobbies[1], p.Hobbies[2], p.Hobbies[3])
+	print("\n- - - - \n")
+	dataOne := NewDidYouKnow("Unixtime",1970)
+	dataTwo := "was born in"
+	fmt.Printf("%s %s %d ",dataOne.name,dataTwo,dataOne.age)
 }
