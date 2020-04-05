@@ -1,6 +1,6 @@
 ### Meine Meinung / Wissen zu GO
 
-##### Version 1
+##### Version 1.0.1
 
 (englische Variante folgt sofern diese hier Fertig ist)
 
@@ -26,64 +26,61 @@ Keine Objekt Orientierte Sprache, nichts mit Vererbung, kein Casting
 
 > **<small>,,Ich habe heute leider kein Foto für dich´´</small>**
 
-**<small>(Generell hat es den Vorteil sich auf eine Convention festzulegen alleine und im Team umso mehr)</small>**
+**<small>(Generell hat es den immer den Vorteil sich auf eine Convention festzulegen ob  alleine oder im Team, da umso mehr.)</small>**
 
 ___
 
-### Das schöne an Go
+### ist gleichzeitig auch das schöne an Go
 
 Variablen können auf mehrere Weisen deklariert werden..
 
 Keine Objekt Orientierte Sprache, nichts mit Vererbung, kein Casting.
 
-Läuft nicht auf einer virtuellen Maschine, das sind die tatsächlichen Adressen
+Läuft nicht auf einer virtuellen Maschine, das sind die tatsächlichen Adressen die da benutzt werden.
 
-die da benutzt werden.
+Direkt sehen woran man ist, durch Integrität sogar gezwungen, sauber
 
-
-
-Daher sieht direkt woran man ist, durch Integrität sogar gezwungen, sauber
-
-und nicht verschwenderisch zu arbeiten.
+und nicht verschwenderisch zu arbeiten. In meinen Augen ein Pluspunkt.
 
 
 
-Der Fokus wird hierbei auf ein Programm gelegt das gut durchdacht/stukturiert ist und seine Arbeit macht.
-
-Zu viel Kreative möglichkeiten können einem selbst oftmals nur in ein tiefes Loch reißen.
-
-**"Die Qual der Wahl"**
+Der Fokus richtet sich hierbei auf ein Programm, dass gut stukturiert ist und seine Arbeit schnell erledigt. Zu viel Kreative möglichkeiten können einem selbst oftmals nur in ein tiefes Loch reißen und man findet kein Ende beim Programmieren. **"Die Qual der Wahl"** fällt hier fast weg.
 
 ___
 
-### Beispiele
+### Nice To Know
 
-Soll eine Variable noch nichts enthalten, dann am besten **var**  nehmen für einen garantierten **Null-Pointer** verweis, somit lassen sich viele Speicherkosten von vornerein vermeiden.
+Soll eine Variable zu Begin keinen Wert enthalten eignet sich das Schlüsselwort **var** besten
+
+um einen 100% garantierten **Null-Pointer** Verweis zu erhalten, somit lassen sich viele Speicherkosten von vornerein schon vermeiden.
 
 Will man einen bei Begin schon festen Wert zuweisen, empfiehlt sich die **shorthand notation**.
 
 ```go
-	// Will man 100 % den 0Pointer Verweis
-	// so sollte man besser so schreiben:
+	// Diesr Integer ist gleich nil
+	// Garantiert NUll-Pointer Verweis zu 100%
 	var hatSicherNull int
-	// der int hat dann gleich nil 
+	
+	// Dieser String ist gleich "" 
+	// Vorsicht, empty ist nicht gleich nil!
+  	// Ein String besteht aus 2 Words in Go
+	// Das erste ist ein Pointer auf ein Array im Hintergrund
+	// und das Zweite die Länge des Arrays.
 	var isSicherEmpty string 
-	// der string hat dann "" also empty nicht gleich nil
-  // ein string besteht aus 2 Words, der erste ist ein Pointer
-  // auf ein Array im Hintergrund, das Zweite die Länge
 
-	// Kurznotation
+
+	// Kurznotation aka shorthand notation
+	// Deklaration und Initialisierung durch :=
+	// immer gut wenn man schon einen Wert zuweisen will
+	// Go erkennt den Tyen automatisch, ist praktisch!
 	eins,zwei := 1,2
 	drei := 3
 	vier := 4
 
-	// Garantiert NUll-Pointer verweis zu 100%
-	var keineAhnungLeer string
-
-	// Es gibt auch platzhalter, kann ja sein das man bei mehreren Rückgaben
-	// nur einen Wert benötigt, dann verweist man  mit _ auf man verzichtet
-	// auf den Wert an der Stelle? muss googeln
+	// Es gibt sogar platzhalter der sogenannte leerer Bezeichner.
+	// Erlaubt verwurft einzelner Werte bei multiplen Rückgaben
+	// Einsatz z.B. wird zu Test zwecken nur einen Wert benötigt
+	// dann schreibt man einach wie folgt
 	_,fuenf := methodeMitZweiReturnsZb()
 
 ```
-
