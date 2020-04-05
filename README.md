@@ -1,6 +1,6 @@
 ### Meine Meinung / Wissen zu GO
 
-##### Version 1.0.1
+##### Version 1.0.2
 
 (englische Variante folgt sofern diese hier Fertig ist)
 
@@ -78,9 +78,9 @@ Will man einen bei Begin schon festen Wert zuweisen, empfiehlt sich die **shorth
 	vier := 4
 
 	// Es gibt sogar platzhalter der sogenannte leerer Bezeichner.
-	// Erlaubt verwurft einzelner Werte bei multiplen Rückgaben
-	// Einsatz z.B. wird zu Test zwecken nur einen Wert benötigt
-	// dann schreibt man einach wie folgt
+	// Erlaubt Verwurft einzelner Werte bei multiplen Rückgaben
+	// Beispiel: zu Testzwecken wird nur ein bestimmter Wert benötigt,
+	// dann schreibt man einach wie folgt um nur den 2ten zu bekommen
 	_,fuenf := methodeMitZweiReturnsZb()
 
 ```
