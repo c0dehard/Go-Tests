@@ -3,6 +3,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 type World struct {
@@ -56,6 +57,19 @@ func NewDidYouKnow(name string,age int) *DidYouKnow{
 	return &p
 }
 
+func whoIsFileOwner(yamlFile string) string {
+	// nonsence to see how an anonymous function could be used
+	// I know it ain't right 
+	file, _ := os.Open(yamlFile)
+	infos, _ := file.Stat()
+	anonymous := struct {
+		owner string
+	}{
+		owner: infos.Name(),
+	}
+	return anonymous.owner
+}
+
 func main() {
 	var test Planet = Planet{Size: 4, Name: "Yavin"}
 	fmt.Print(test.Name)
@@ -86,4 +100,6 @@ func main() {
 	dataOne := NewDidYouKnow("Unixtime",1970)
 	dataTwo := "was born in"
 	fmt.Printf("%s %s %d ",dataOne.name,dataTwo,dataOne.age)
+	xyz := whoIsFileOwner("newPOST.yaml")
+	print(xyz)
 }
