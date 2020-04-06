@@ -1,6 +1,6 @@
 ### Meine Meinung / Wissen zu GO
 
-##### Version 1.1.2
+##### Version 1.1.3
 
 <small>Version = (Haupt Version. Erweitert. Fehler behoben)</small>
 
@@ -28,7 +28,7 @@ Keine Objekt Orientierte Sprache, nichts mit Vererbung, kein Casting
 
 > **<small>,,Ich habe heute leider kein Foto für dich´´</small>**
 
-**<small>(Generell hat es den immer den Vorteil sich auf eine Convention festzulegen ob  alleine oder im Team, da umso mehr.)</small>**
+**<small>(Generell hat es immer einen Vorteil, sich auf eine Convention festzulegen. Egal ob alleine oder im Team, da sogar umso mehr.)</small>**
 
 ___
 
@@ -52,9 +52,7 @@ ___
 
 ### Nice To Know
 
-Soll eine Variable zu Begin keinen Wert enthalten eignet sich das Schlüsselwort **var** besten
-
-um einen 100% garantierten **Null-Pointer** Verweis zu erhalten, somit lassen sich viele Speicherkosten von vornerein schon vermeiden.
+Soll eine Variable zu Begin keinen Wert enthalten eignet sich das Schlüsselwort **var** bestens, um einen 100% garantierten **Null-Pointer** Verweis zu erhalten, somit lassen sich viele Speicherkosten von vornherein schon vermeiden.
 
 Will man einen bei Begin schon festen Wert zuweisen, empfiehlt sich die **shorthand notation**.
 
