@@ -1,6 +1,6 @@
 ### Meine Meinung / Wissen zu GO
 
-##### Version 1.1.3
+##### Version 1.1.4
 
 <small>Version = (Haupt Version. Erweitert. Fehler behoben)</small>
 
@@ -87,7 +87,7 @@ Will man einen bei Begin schon festen Wert zuweisen, empfiehlt sich die **shorth
 
 ___
 
-### Strkturen Typen, Konvertierung und was man wissen sollte
+### Strukturen Typen, Konvertierung und was man wissen sollte
 
 ```go
 package main
@@ -141,7 +141,7 @@ func main() {
 	fmt.Println(b, a, e)
 ```
 
-### Fazit 
+### Kurzes Fazit Dazu
 
 - Eine Struktur kann named typed oder anonymous typed sein.
 
@@ -153,4 +153,4 @@ func main() {
 
 - Durch Integrität ist man gezwungen Variablen auch zu benutzen, das ist sehr sinnvoll.
 
-Aber um hier erstmal mögliche Mimimis zu vermeiden, habe man auch einfach vorerst sinnlos Printen :)
+Aber um hier erstmal mögliche Mimimis zu vermeiden, einfach mal sinnlos Printen :)
