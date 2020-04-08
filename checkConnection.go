@@ -40,9 +40,9 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	// Sample serverinfos to test
 	storedInfos := []server{
-		server{alias: "Cloudflare", ip: "1.1.1.1"},
-		server{alias: "Google DNS", ip: "8.8.8.8"},
-		server{alias: "Home-Office", ip: "127.0.0.1"},
+		{alias: "Cloudflare", ip: "1.1.1.1"},
+		{alias: "Google DNS", ip: "8.8.8.8"},
+		{alias: "Home-Office", ip: "127.0.0.1"},
 	}
 	for {
 		fmt.Print("gsCLI> ")
