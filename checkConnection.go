@@ -27,6 +27,15 @@ func (s server) getInfo() string {
 }
 
 func main() {
-	s := server{alias: "Google DNS", ip: "8.8.8.8"}
-	fmt.Println(s.getInfo())
+
+	storedInfos := []server{
+		server{alias: "Cloudflare", ip: "1.1.1.1"},
+		server{alias: "Google DNS", ip: "8.8.8.8"},
+		server{alias: "Home-Office", ip: "127.0.0.1"},
+	}
+
+	for _, stored := range storedInfos {
+		fmt.Println(stored.getInfo())
+	}
+
 }
