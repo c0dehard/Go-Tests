@@ -7,8 +7,8 @@ import (
 )
 
 const (
-	disconnected = "\033[1;31m disconnected\033[0m"
-	connected    = "\033[1;32m connected\033[0m"
+	disconnected = "\033[1;31m ✖\033[0m"
+	connected    = "\033[1;32m ✔\033[0m"
 )
 
 type server struct {
