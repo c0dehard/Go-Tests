@@ -16,7 +16,6 @@ type server struct {
 }
 
 func (s server) getInfo() string {
-
 	info := fmt.Sprintf("status: \033[1;36m%s\033[0m %s", s.alias, s.ip)
 	stat := disconnected
 	out, _ := exec.Command("ping", s.ip, "-t 1").Output()
@@ -26,6 +25,12 @@ func (s server) getInfo() string {
 	return info + stat
 }
 
+func displayAll(storage []server) {
+	for _, stored := range storage {
+		fmt.Println(stored.getInfo())
+	}
+}
+
 func main() {
 
 	storedInfos := []server{
@@ -33,9 +38,6 @@ func main() {
 		server{alias: "Google DNS", ip: "8.8.8.8"},
 		server{alias: "Home-Office", ip: "127.0.0.1"},
 	}
-
-	for _, stored := range storedInfos {
-		fmt.Println(stored.getInfo())
-	}
+	displayAll(storedInfos)
 
 }
