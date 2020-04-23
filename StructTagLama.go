@@ -9,14 +9,16 @@ import (
 	"time"
 )
 
+// Lama represents infos about a Lama
 type Lama struct {
 	LamaName  string //!`example:"name"` it ignores annotations when using encoding/json
 	Password  string //? can only get Exported fields for automatic annotation, YEP!
 	CreatedAt time.Time
 }
 
+// String is like toString or __repr__ from other languages
 func (l *Lama) String() string {
-	return fmt.Sprintf("Hi! I'm %s", l.LamaName)
+	return fmt.Sprintf("Hi! I'm %s\n", l.LamaName)
 }
 
 func main() {
